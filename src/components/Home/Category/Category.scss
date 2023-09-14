@@ -1,0 +1,33 @@
+@import "../../../css-config/mixins.scss";
+.shop-by-categery{
+    margin: 25px 0;
+    @include md{
+        margin: 50px 0;
+    }
+    .categeries{
+        gap: 10px;
+        display: flex;
+        flex-flow: wrap;
+        .categery{
+            background-color: black;
+            cursor: pointer;
+            width: calc(50% - 10px);
+            overflow: hidden;
+            @include md{
+                width: calc(25% - 10px);
+                margin: 0 auto;
+            }
+            img{
+                width: 100%;
+                display: block;
+                transition: all ease 0.3s;
+                cursor: pointer;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
